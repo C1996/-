@@ -1,7 +1,7 @@
 // 第一种防抖机制 事件触发 => 延时 => 执行回调   模拟输入框提示机制
 
 // 回调函数 一般用于处理业务逻辑等
-function callBack() {
+function callBack(value) {
   console.log('ahaha')
 }
 
