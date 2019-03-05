@@ -13,8 +13,8 @@ function debounce(fn, delay = 500) {
   // 第一种做法 常见做法
   let timer = null // 设置定时器
   return function(args) {
-    const that = this // 定时器内部 this 指向偏离 这里做个保存
-    const _args = args // 保存参数 备用
+    let that = this // 定时器内部 this 指向偏离 这里做个保存
+    let _args = args // 保存参数 备用
     if (timer) clearTimeout(timer)
     timer = setTimeout(() => {
       fn.call(that, _args)
@@ -42,8 +42,8 @@ input.addEventListener('keyup', e => {
 function debounce(fn, delay = 500, immediate = true) {
   let timer = null
   return function(args) {
-    const that = this
-    const _args = args
+    let that = this
+    let _args = args
     if (timer) clearTimeout(timer)
     if (immediate) {
       if (!timer) fn.call(that, _args)
