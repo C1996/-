@@ -1,3 +1,9 @@
+/**
+ * 选择排序
+ * @param {Array} arr 
+ * 在未排序序列中找到最小的元素，放在序列起始位置
+ * 再从剩余的未排序元素中找到最小元素，然后放到已排序序列末尾
+ */
 function selectionSort(arr) {
   var len = arr.length;
   var minIndex, temp;
@@ -15,5 +21,5 @@ function selectionSort(arr) {
   return arr;
 }
 
-var val = selectionSort([1, 5, 6, 9, 10, 3, 0]);
+var val = selectionSort([10, 9, 5, 3, 6, 2, 0]);
 console.log(val);
